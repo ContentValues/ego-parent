@@ -86,20 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ego-manage/src/main/java/com/ego/manage/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" column="91" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
+            <state relative-caret-position="300">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -133,6 +124,9 @@
     <dirStrings>
       <dir>$PROJECT_DIR$/ego-pojo/src/main/java</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -223,6 +217,7 @@
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -235,41 +230,6 @@
             <path>
               <item name="ego-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ego-parent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ego-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ego-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ego-manage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ego-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ego-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ego-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ego-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ego-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ego-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ego-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ego-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ego-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ego-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ego-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ego-manage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="manage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -404,12 +364,12 @@
       <workItem from="1585120074449" duration="1408000" />
       <workItem from="1585123711750" duration="155000" />
       <workItem from="1585124126039" duration="1157000" />
-      <workItem from="1585125335656" duration="326000" />
+      <workItem from="1585125335656" duration="574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34805000" />
+    <option name="totallyTimeSpent" value="35053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,6 +382,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29641694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -784,17 +745,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ego-manage/src/main/java/com/ego/manage/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="16" column="91" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
