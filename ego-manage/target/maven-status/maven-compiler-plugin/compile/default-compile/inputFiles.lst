@@ -1,6 +1,10 @@
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/controller/PageController.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/Test.java
-/Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/impl/TbItemServiceManagerImpl.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/controller/TbItemController.java
+/Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/TbItemDescService.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/TbItemService.java
+/Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/controller/TbItemCatController.java
+/Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/impl/TbItemDescServiceImpl.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/impl/TbItemServiceImpl.java
+/Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/TbItemCatService.java
+/Users/zhangmin/Documents/后台学习/ego-parent/ego-manage/src/main/java/com/ego/manage/service/impl/TbItemCatServiceImpl.java

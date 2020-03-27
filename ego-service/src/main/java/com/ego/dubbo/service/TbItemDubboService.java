@@ -2,6 +2,7 @@ package com.ego.dubbo.service;
 
 import com.ego.commons.pojo.EasyUIDataGrid;
 import com.ego.pojo.TbItem;
+import com.ego.pojo.TbItemDesc;
 
 /**
  * @program: ego-parent
@@ -17,11 +18,37 @@ public interface TbItemDubboService {
      * @return
      */
     EasyUIDataGrid show(int page, int rows);
+
+
     /**
-     * 根据id修改状态
+     * 新增商品信息
+     * @param tbItem
+     * @return
+     */
+    int insTbItem(TbItem tbItem);
+
+
+    /**
+     * 新增商品信息 具有事务功能
+     * @param tbItem
+     * @param tbItemDesc
+     * @return
+     */
+    int insTbItem(TbItem tbItem, TbItemDesc tbItemDesc) throws Exception;
+
+
+
+    /**
+     * 修改商品状态
      * @param id
      * @param status
      * @return
      */
-    int updItemStatus(TbItem tbItem);
+    int updStatus(long id,int status);
+
+
+
+
+
+
 }

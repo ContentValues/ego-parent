@@ -1,7 +1,10 @@
 package com.ego;
 
+import com.ego.mapper.TbItemCatMapper;
 import com.ego.mapper.TbItemMapper;
 import com.ego.pojo.TbItem;
+import com.ego.pojo.TbItemCat;
+import com.ego.pojo.TbItemCatExample;
 import com.ego.pojo.TbItemExample;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -18,8 +21,9 @@ import java.util.List;
 public class TestPageHelper {
 
 
-    public static void main(String[] args){
-        testPageHelper();
+    public static void main(String[] args) {
+//        testPageHelper();
+        testTbItemCat();
     }
 
 
@@ -38,7 +42,7 @@ public class TestPageHelper {
         PageHelper.startPage(1, 10);
         List<TbItem> list = mapper.selectByExample(example);//查询
         // 取商品列表
-        for(TbItem item : list) {
+        for (TbItem item : list) {
             System.out.println(item.getTitle());
         }
         // 取分页信息
@@ -46,4 +50,31 @@ public class TestPageHelper {
         long total = pageInfo.getTotal(); //获取总记录数
         System.out.println("共有商品信息：" + total);
     }
+
+
+    public static void testTbItemCat() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+
+        TbItemCatMapper tbItemCatMapper = context.getBean(TbItemCatMapper.class);
+
+        TbItemCatExample example = new TbItemCatExample();
+        example.createCriteria().andParentIdEqualTo((long) 0);
+        List<TbItemCat> parent = tbItemCatMapper.selectByExample(example);
+
+//        for (TbItemCat tbItemCat : parent) {
+//            TbItemCatExample catExample = new TbItemCatExample();
+//            catExample.createCriteria().andParentIdEqualTo(tbItemCat.getId());
+//            List<TbItemCat> childs = tbItemCatMapper.selectByExample(catExample);
+//            tbItemCat.setChildren(childs);
+//        }
+
+        System.out.println("哈哈");
+
+    }
+
+
 }
+
+
+

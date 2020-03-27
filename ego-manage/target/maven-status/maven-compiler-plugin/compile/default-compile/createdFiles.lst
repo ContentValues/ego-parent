@@ -1,6 +1,10 @@
-com/ego/manage/service/impl/TbItemServiceManagerImpl.class
-com/ego/manage/controller/TbItemController.class
+com/ego/manage/controller/TbItemCatController.class
+com/ego/manage/service/TbItemDescService.class
 com/ego/manage/Test.class
 com/ego/manage/controller/PageController.class
 com/ego/manage/service/impl/TbItemServiceImpl.class
+com/ego/manage/service/impl/TbItemDescServiceImpl.class
+com/ego/manage/controller/TbItemController.class
+com/ego/manage/service/impl/TbItemCatServiceImpl.class
+com/ego/manage/service/TbItemCatService.class
 com/ego/manage/service/TbItemService.class

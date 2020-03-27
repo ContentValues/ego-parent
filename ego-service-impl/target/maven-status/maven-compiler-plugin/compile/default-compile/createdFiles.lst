@@ -5,10 +5,11 @@ com/ego/dubbo/service/impl/TbItemDubboServiceImpl.class
 com/ego/mapper/TbItemParamMapper.class
 com/ego/TestPageHelper.class
 com/ego/mapper/TbItemParamItemMapper.class
+com/ego/dubbo/service/impl/TbItemDescDubboServiceImpl.class
 com/ego/mapper/TbContentCategoryMapper.class
-com/ego/test/Test.class
+com/ego/dubbo/service/impl/TbItemCatDubboServiceImpl.class
 com/ego/mapper/TbOrderItemMapper.class
-com/ego/dubbo/service/impl/TbItemServiceDDDmpl.class
+com/ego/Test.class
 com/ego/mapper/TbItemMapper.class
 com/ego/mapper/TbUserMapper.class
 com/ego/mapper/TbItemCatMapper.class

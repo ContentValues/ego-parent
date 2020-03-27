@@ -15,9 +15,9 @@
 	<!--<dubbo:registry address="192.168.249.128:2181" protocol="zookeeper"></dubbo:registry>-->
 	<dubbo:registry address="127.0.0.1:2181" protocol="zookeeper"></dubbo:registry>
 	<!-- 配置注解扫描 -->
-	<!--<dubbo:annotation package="com.ego.manage.service.impl"/>-->
+	<dubbo:annotation package="com.ego.manage.service.impl"/>
 
 	<!--为什么不用这个扫描 按理说manger使用的是ego-service -->
-	<dubbo:annotation package="com.ego.dubbo.service.impl"/>
+	<!--<dubbo:annotation package="com.ego.dubbo.service.impl"/>-->
 </beans>
 
