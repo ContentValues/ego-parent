@@ -31,4 +31,9 @@ public class TbItemCatServiceImpl implements TbItemCatService {
         }
         return list;
     }
+
+    @Override
+    public TbItemCat selById(long id) {
+        return tbItemCatDubboServiceImpl.selById(id);
+    }
 }

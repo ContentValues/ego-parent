@@ -1,8 +1,6 @@
 package com.ego.manage.controller;
 
 import javax.annotation.Resource;
-
-import com.ego.commons.utils.ResultCodeConstans;
 import com.ego.pojo.TbItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -101,12 +99,12 @@ public class TbItemController {
      */
     @RequestMapping("item/save")
     @ResponseBody
-    public EgoResult save(TbItem tbItem, String desc) {
+    public EgoResult save(TbItem tbItem, String desc, String itemParams) {
         EgoResult er = new EgoResult();
         int index = 0;
         try {
-            index = tbItemServiceImpl.insTbItem(tbItem, desc);
-            if (index == ResultCodeConstans.SUCCESS_CODE) {
+            index = tbItemServiceImpl.insTbItem(tbItem, desc, itemParams);
+            if (index == 3) {//插入三张表
                 er.setStatus(200);
             }
         } catch (Exception e) {

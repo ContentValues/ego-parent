@@ -9,6 +9,7 @@ tomcat
 #
 
 # Binaries
+*.idea
 *.7z
 *.dmg
 *.gz

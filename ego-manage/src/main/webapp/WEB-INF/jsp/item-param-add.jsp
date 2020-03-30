@@ -35,7 +35,7 @@
 		</ul>
 	</li>
 </div>
-<script style="text/javascript">
+<script type="text/javascript">
 	$(function(){
 		EGO.initItemCat({
 			fun:function(node){

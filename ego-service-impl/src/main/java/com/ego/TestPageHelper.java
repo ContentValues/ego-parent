@@ -2,10 +2,8 @@ package com.ego;
 
 import com.ego.mapper.TbItemCatMapper;
 import com.ego.mapper.TbItemMapper;
-import com.ego.pojo.TbItem;
-import com.ego.pojo.TbItemCat;
-import com.ego.pojo.TbItemCatExample;
-import com.ego.pojo.TbItemExample;
+import com.ego.mapper.TbItemParamMapper;
+import com.ego.pojo.*;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +21,8 @@ public class TestPageHelper {
 
     public static void main(String[] args) {
 //        testPageHelper();
-        testTbItemCat();
+//        testTbItemCat();
+        testTbItemParamImplDubboServiceImpl();
     }
 
 
@@ -68,9 +67,20 @@ public class TestPageHelper {
 //            List<TbItemCat> childs = tbItemCatMapper.selectByExample(catExample);
 //            tbItemCat.setChildren(childs);
 //        }
-
         System.out.println("哈哈");
 
+    }
+
+    public static void testTbItemParamImplDubboServiceImpl() {
+        // 创建一个spring容器
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        // 从spring容器中获取mapper代理对象
+        TbItemParamMapper tbItemParamMapper = context.getBean(TbItemParamMapper.class);
+        PageHelper.startPage(1,30);
+        List<TbItemParam> list = tbItemParamMapper.selectByExample(new TbItemParamExample());
+        PageInfo<TbItemParam> pi = new PageInfo<>(list);
+        long total = pi.getTotal(); //获取总记录数
+        System.out.println("共有商品信息：" + total);
     }
 
 

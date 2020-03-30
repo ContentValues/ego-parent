@@ -5,6 +5,7 @@ import com.ego.commons.utils.ResultCodeConstans;
 import com.ego.dubbo.service.TbItemDescDubboService;
 import com.ego.manage.controller.TbItemController;
 import com.ego.pojo.TbItemDesc;
+import com.ego.pojo.TbItemParamItem;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
@@ -43,7 +44,7 @@ public class TbItemServiceImpl implements TbItemService {
     }
 
     @Override
-    public int insTbItem(TbItem tbItem, String desc) throws Exception {
+    public int insTbItem(TbItem tbItem, String desc,String itemParams) throws Exception {
 
 //        Date date = new Date();
 //        long id = IDUtils.genItemId();
@@ -72,24 +73,28 @@ public class TbItemServiceImpl implements TbItemService {
 //        return ResultCodeConstans.ERROR_CODE;
 
         Date date = new Date();
-        long id = IDUtils.genItemId();
+        long itemId = IDUtils.genItemId();
 
-        tbItem.setId(id);
+        tbItem.setId(itemId);
         tbItem.setStatus((byte) 1);
         tbItem.setCreated(date);
         tbItem.setUpdated(date);
 
         TbItemDesc tbItemDesc = new TbItemDesc();
-        tbItemDesc.setItemId(id);
+        tbItemDesc.setItemId(itemId);
         tbItemDesc.setItemDesc(desc);
         tbItemDesc.setCreated(date);
         tbItemDesc.setUpdated(date);
 
-        int index = tbItemDubboServiceImpl.insTbItem(tbItem,tbItemDesc);
-        if (index == 2) {
-            return ResultCodeConstans.SUCCESS_CODE;
-        }
-        return ResultCodeConstans.ERROR_CODE;
+        TbItemParamItem tbItemParamItem = new TbItemParamItem();
+//        tbItemParamItem.setId();
+        tbItemParamItem.setItemId(itemId);
+        tbItemParamItem.setCreated(date);
+        tbItemParamItem.setUpdated(date);
+        tbItemParamItem.setParamData(itemParams);
+
+
+        return tbItemDubboServiceImpl.insTbItem(tbItem,tbItemDesc,tbItemParamItem);
 
 
 

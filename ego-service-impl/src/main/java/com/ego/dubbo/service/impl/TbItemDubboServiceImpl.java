@@ -7,9 +7,11 @@ import com.ego.commons.pojo.EasyUIDataGrid;
 import com.ego.dubbo.service.TbItemDubboService;
 import com.ego.mapper.TbItemDescMapper;
 import com.ego.mapper.TbItemMapper;
+import com.ego.mapper.TbItemParamItemMapper;
 import com.ego.pojo.TbItem;
 import com.ego.pojo.TbItemDesc;
 import com.ego.pojo.TbItemExample;
+import com.ego.pojo.TbItemParamItem;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -21,6 +23,10 @@ public class TbItemDubboServiceImpl implements TbItemDubboService {
 
     @Resource
     private TbItemDescMapper tbItemDescMapper;
+
+
+    @Resource
+    private TbItemParamItemMapper tbItemParamItemMapper;
 
     @Override
     public EasyUIDataGrid show(int page, int rows) {
@@ -45,19 +51,19 @@ public class TbItemDubboServiceImpl implements TbItemDubboService {
     }
 
     @Override
-    public int insTbItem(TbItem tbItem, TbItemDesc tbItemDesc) throws Exception {
+    public int insTbItem(TbItem tbItem, TbItemDesc tbItemDesc, TbItemParamItem tbItemParamItem) throws Exception {
         int index = 0;
         try {
-            index = tbItemMapper.insert(tbItem);
+            index += tbItemMapper.insert(tbItem);
             index += tbItemDescMapper.insert(tbItemDesc);
+            index += tbItemParamItemMapper.insert(tbItemParamItem);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if(index==2){
-            return 2;
-        }else{
+        if (index != 3) {
             throw new Exception("新增失败,数据还原");
         }
+        return index;
     }
 
 

@@ -13,6 +13,8 @@
         <module>ego-service</module>
         <module>ego-service-impl</module>
         <module>ego-manage</module>
+        <module>ego-item</module>
+        <module>ego-protal</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -33,9 +35,18 @@
         <zkClient-version>0.10</zkClient-version>
         <tomcat-version>2.2</tomcat-version>
         <pagehelper-version>4.1.6</pagehelper-version>
+        <okhttp-version>4.4.1</okhttp-version>
+
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--okhttp网络请求-->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp-version}</version>
+            </dependency>
+
             <!-- 分页插件 -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
