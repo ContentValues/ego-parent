@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
@@ -23,10 +24,9 @@ public class Demo {
      * @throws SolrServerException
      * @throws IOException
      */
-
-    public static void  testInsert() throws SolrServerException, IOException{
-        SolrClient client = new HttpSolrClient("http://192.168.177.134:8080/solr/");
-
+    public void testInsert() throws SolrServerException, IOException{
+        CloudSolrClient client = new CloudSolrClient("192.168.249.131:2181,192.168.249.131:2182,192.168.249.131:2183");
+        client.setDefaultCollection("collection1");
         SolrInputDocument doc = new SolrInputDocument();
         doc.addField("id", "005");
 //		doc.addField("bjsxt", "java和大数据培训");
@@ -36,14 +36,16 @@ public class Demo {
         client.commit();
     }
 
-    public static void testDelete() throws SolrServerException, IOException{
-        SolrClient client = new HttpSolrClient("http://192.168.177.134:8080/solr/");
+    public void testDelete() throws SolrServerException, IOException{
+        CloudSolrClient client = new CloudSolrClient("192.168.249.131:2181,192.168.249.131:2182,192.168.249.131:2183");
+        client.setDefaultCollection("collection1");
         client.deleteById("001");
         client.commit();
     }
 
-    public static void testQuery() throws SolrServerException, IOException{
-        SolrClient client = new HttpSolrClient("http://192.168.177.134:8080/solr/");
+    public void testQuery() throws SolrServerException, IOException{
+        CloudSolrClient client = new CloudSolrClient("192.168.249.131:2181,192.168.249.131:2182,192.168.249.131:2183");
+        client.setDefaultCollection("collection1");
 
         //可视化界面左侧条件
         SolrQuery params = new SolrQuery();
@@ -69,6 +71,8 @@ public class Demo {
         QueryResponse response = client.query(params);
 
         Map<String, Map<String, List<String>>> hh = response.getHighlighting();
+
+
         //取出docs{}
         SolrDocumentList solrList = response.getResults();
 
@@ -88,11 +92,6 @@ public class Demo {
             System.out.println(doc.getFieldValue("bjsxt1"));
         }
 
-    }
-
-
-    public static void main(String[] args) throws Exception {
-        testQuery();
     }
 
 }

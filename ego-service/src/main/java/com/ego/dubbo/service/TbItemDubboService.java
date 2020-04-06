@@ -5,6 +5,8 @@ import com.ego.pojo.TbItem;
 import com.ego.pojo.TbItemDesc;
 import com.ego.pojo.TbItemParamItem;
 
+import java.util.List;
+
 /**
  * @program: ego-parent
  * @author: ShyBlue
@@ -49,7 +51,11 @@ public interface TbItemDubboService {
     int updStatus(long id,int status);
 
 
-
+    /**
+     * 通过商品状态查询所有商品信息
+     * @return
+     */
+    List<TbItem> selAllByStatus(byte status);
 
 
 

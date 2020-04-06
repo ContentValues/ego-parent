@@ -74,4 +74,11 @@ public class TbItemDubboServiceImpl implements TbItemDubboService {
         tbItem.setStatus((byte) status);
         return tbItemMapper.updateByPrimaryKeySelective(tbItem);
     }
+
+    @Override
+    public List<TbItem> selAllByStatus(byte status) {
+        TbItemExample example = new TbItemExample();
+        example.createCriteria().andStatusEqualTo(status);
+        return tbItemMapper.selectByExample(example);
+    }
 }
