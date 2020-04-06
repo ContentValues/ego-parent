@@ -15,6 +15,8 @@
         <module>ego-manage</module>
         <module>ego-item</module>
         <module>ego-protal</module>
+        <module>ego-redis</module>
+        <module>ego-search</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -36,10 +38,28 @@
         <tomcat-version>2.2</tomcat-version>
         <pagehelper-version>4.1.6</pagehelper-version>
         <okhttp-version>4.4.1</okhttp-version>
+        <solrj-version>5.3.1</solrj-version>
+        <logging-version>1.2</logging-version>
 
     </properties>
     <dependencyManagement>
         <dependencies>
+
+            <!--solr-->
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${solrj-version}</version>
+            </dependency>
+
+            <!--commons-logging-->
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${logging-version}</version>
+            </dependency>
+
+
             <!--okhttp网络请求-->
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>

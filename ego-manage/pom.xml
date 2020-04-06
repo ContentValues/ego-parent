@@ -13,6 +13,39 @@
     <packaging>war</packaging>
 
     <dependencies>
+
+        <!--solr-->
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-io</artifactId>
+                    <groupId>commons-io</groupId>
+                </exclusion>
+
+                <exclusion>
+                    <groupId>org.apache.zookeeper</groupId>
+                    <artifactId>zookeeper</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--commons-logging-->
+        <!--<dependency>-->
+            <!--<groupId>commons-logging</groupId>-->
+            <!--<artifactId>commons-logging</artifactId>-->
+            <!--<version>${logging-version}</version>-->
+        <!--</dependency>-->
+
+
+        <!-- 依赖redis -->
+        <dependency>
+            <groupId>com.ego</groupId>
+            <artifactId>ego-redis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- 分页插件 -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>

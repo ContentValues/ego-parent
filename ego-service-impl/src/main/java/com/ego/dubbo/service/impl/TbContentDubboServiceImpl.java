@@ -19,6 +19,24 @@ import java.util.List;
 public class TbContentDubboServiceImpl implements TbContentDubboService {
     @Resource
     TbContentMapper tbContentMapper;
+
+    @Override
+    public List<TbContent> selByCount(int count, boolean isSort) {
+        TbContentExample example = new TbContentExample();
+        //排序
+        if(isSort){
+            example.setOrderByClause("updated desc");
+        }
+        if(count!=0){
+            PageHelper.startPage(1, count);
+            List<TbContent> list = tbContentMapper.selectByExampleWithBLOBs(example);
+            PageInfo<TbContent> pi = new PageInfo<>(list);
+            return pi.getList();
+        }else{
+            return tbContentMapper.selectByExampleWithBLOBs(example);
+        }
+    }
+
     @Override
     public EasyUIDataGrid selAll(long cid, int page, int rows) {
         EasyUIDataGrid easyUIDataGrid = new EasyUIDataGrid();
