@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ego-item" />
     <file type="web" url="file://$PROJECT_DIR$/ego-manage" />
+    <file type="web" url="file://$PROJECT_DIR$/ego-passport" />
     <file type="web" url="file://$PROJECT_DIR$/ego-protal" />
     <file type="web" url="file://$PROJECT_DIR$/ego-search" />
   </component>

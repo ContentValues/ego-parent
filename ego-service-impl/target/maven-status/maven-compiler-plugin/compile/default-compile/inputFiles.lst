@@ -10,6 +10,7 @@
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/mapper/TbItemDescMapper.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/dubbo/service/impl/TbItemParamItemDubboServiceImpl.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/mapper/TbContentCategoryMapper.java
+/Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/dubbo/service/impl/TbUserDubboServiceImpl.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/Test.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/mapper/TbOrderMapper.java
 /Users/zhangmin/Documents/后台学习/ego-parent/ego-service-impl/src/main/java/com/ego/mapper/TbUserMapper.java

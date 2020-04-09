@@ -9,6 +9,7 @@
         <module name="ego-commons" />
         <module name="ego-item" />
         <module name="ego-manage" />
+        <module name="ego-passport" />
         <module name="ego-pojo" />
         <module name="ego-protal" />
         <module name="ego-redis" />

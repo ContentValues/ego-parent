@@ -52,6 +52,13 @@ public interface TbItemDubboService {
 
 
     /**
+     * 查询商品信息
+     * @return
+     */
+    TbItem selById(long id);
+
+
+    /**
      * 通过商品状态查询所有商品信息
      * @return
      */

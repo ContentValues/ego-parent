@@ -1,11 +1,14 @@
 package com.ego.manage.service.impl;
 
+import com.ego.commons.utils.HttpClientUtil;
 import com.ego.commons.utils.IDUtils;
+import com.ego.commons.utils.JsonUtils;
 import com.ego.commons.utils.ResultCodeConstans;
 import com.ego.dubbo.service.TbItemDescDubboService;
 import com.ego.manage.controller.TbItemController;
 import com.ego.pojo.TbItemDesc;
 import com.ego.pojo.TbItemParamItem;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
@@ -17,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class TbItemServiceImpl implements TbItemService {
@@ -24,6 +29,9 @@ public class TbItemServiceImpl implements TbItemService {
     private TbItemDubboService tbItemDubboServiceImpl;
     @Reference
     private TbItemDescDubboService tbItemDescDubboServiceImpl;
+
+    @Value("${search.url}")
+    private String url ;
 
     @Override
     public EasyUIDataGrid show(int page, int rows) {
@@ -92,6 +100,19 @@ public class TbItemServiceImpl implements TbItemService {
         tbItemParamItem.setCreated(date);
         tbItemParamItem.setUpdated(date);
         tbItemParamItem.setParamData(itemParams);
+
+        final TbItem itemFinal = tbItem;
+        final String descFinal = desc;
+        new Thread(){
+            public void run() {
+                Map<String,Object> map = new HashMap<>();
+                map.put("item", itemFinal);
+                map.put("desc", descFinal);
+
+                HttpClientUtil.doPostJson(url, JsonUtils.objectToJson(map));
+                //使用java代码调用其他项目的控制器
+            };
+        }.start();
 
 
         return tbItemDubboServiceImpl.insTbItem(tbItem,tbItemDesc,tbItemParamItem);

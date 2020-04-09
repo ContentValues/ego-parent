@@ -11,4 +11,12 @@ public interface TbItemParamItemDubboService {
      */
     int insTbItemParamItem(TbItemParamItem tbItemParamItem);
 
+
+    /**
+     * 发现商品规格参数
+     * @return
+     */
+    TbItemParamItem selById(long id);
+
+
 }

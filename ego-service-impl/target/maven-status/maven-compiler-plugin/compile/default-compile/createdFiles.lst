@@ -9,6 +9,7 @@ com/ego/mapper/TbItemParamItemMapper.class
 com/ego/dubbo/service/impl/TbItemDescDubboServiceImpl.class
 com/ego/mapper/TbContentCategoryMapper.class
 com/ego/dubbo/service/impl/TbItemCatDubboServiceImpl.class
+com/ego/dubbo/service/impl/TbUserDubboServiceImpl.class
 com/ego/mapper/TbOrderItemMapper.class
 com/ego/dubbo/service/impl/TbContentCategoryDubboServiceImpl.class
 com/ego/dubbo/service/impl/TbItemParamItemDubboServiceImpl.class

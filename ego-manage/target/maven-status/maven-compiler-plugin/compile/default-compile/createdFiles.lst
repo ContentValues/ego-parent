@@ -1,3 +1,4 @@
+com/ego/manage/controller/PicController.class
 com/ego/manage/controller/TbContentCategoryController.class
 com/ego/manage/Test.class
 com/ego/manage/controller/PageController.class
@@ -10,11 +11,14 @@ com/ego/manage/service/impl/TbItemCatServiceImpl.class
 com/ego/manage/service/TbItemCatService.class
 com/ego/manage/service/TbContentService.class
 com/ego/manage/service/TbItemService.class
+com/ego/manage/service/impl/PicServiceImpl.class
 com/ego/manage/controller/TbItemCatController.class
 com/ego/manage/service/impl/TbContentCategoryServiceImpl.class
 com/ego/manage/service/TbItemDescService.class
 com/ego/manage/pojo/TbItemParamChild.class
 com/ego/manage/service/impl/TbItemServiceImpl.class
 com/ego/manage/service/TbItemParamService.class
+com/ego/manage/service/impl/TbItemServiceImpl$1.class
 com/ego/manage/controller/TbItemController.class
 com/ego/manage/controller/TbItemParamController.class
+com/ego/manage/service/PicService.class

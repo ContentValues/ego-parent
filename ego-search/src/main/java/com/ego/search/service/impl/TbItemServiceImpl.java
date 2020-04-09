@@ -13,6 +13,7 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
+import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.SolrInputDocument;
@@ -116,6 +117,20 @@ public class TbItemServiceImpl implements TbItemService {
 
     @Override
     public int add(Map<String, Object> map, String desc) throws SolrServerException, IOException {
+
+        SolrInputDocument doc = new SolrInputDocument();
+        doc.setField("id", map.get("id"));
+        doc.setField("item_title", map.get("title"));
+        doc.setField("item_sell_point", map.get("sellPoint"));
+        doc.setField("item_price", map.get("price"));
+        doc.setField("item_image", map.get("image"));
+        doc.setField("item_category_name", tbItemCatDubboServiceImpl.selById((Integer)map.get("cid")).getName());
+        doc.setField("item_desc", desc);
+        UpdateResponse response = solrClient.add(doc);
+        solrClient.commit();
+        if(response.getStatus()==0){
+            return 1;
+        }
         return 0;
     }
 }

@@ -3,11 +3,13 @@ package com.ego.search.controller;
 import com.ego.search.service.TbItemService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -58,6 +60,24 @@ public class TbItemServiceController {
             e.printStackTrace();
         }
         return "search";
+    }
+
+    /**
+     * 新增
+     * @param map
+     * @return
+     */
+    @RequestMapping("solr/add")
+    @ResponseBody
+    public int add(@RequestBody Map<String,Object> map){
+        System.out.println(map);
+        System.out.println(map.get("item"));
+        try {
+            return tbItemServiceImpl.add((LinkedHashMap)map.get("item"),map.get("desc").toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
 

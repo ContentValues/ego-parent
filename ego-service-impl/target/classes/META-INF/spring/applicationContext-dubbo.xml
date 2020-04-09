@@ -41,6 +41,9 @@
 	<dubbo:service interface="com.ego.dubbo.service.TbContentDubboService" ref="tbContentServiceImpl"></dubbo:service>
 	<bean id="tbContentServiceImpl" class="com.ego.dubbo.service.impl.TbContentDubboServiceImpl"></bean>
 
+	<dubbo:service interface="com.ego.dubbo.service.TbUserDubboService" ref="tbContentDubboServiceImpl"></dubbo:service>
+	<bean id="tbContentDubboServiceImpl" class="com.ego.dubbo.service.impl.TbUserDubboServiceImpl"></bean>
+
 
 	<import resource="../../applicationContext.xml"/>
 </beans>
