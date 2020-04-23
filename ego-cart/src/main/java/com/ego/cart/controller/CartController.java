@@ -2,6 +2,7 @@ package com.ego.cart.controller;
 
 import business.TbItemChild;
 import com.ego.cart.service.CartService;
+import com.ego.commons.pojo.EgoResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,20 +35,16 @@ public class CartController {
         return "cartSuccess";
     }
 
-
     @RequestMapping(value = "cart/delete/{id}.action")
     @ResponseBody
-    public String delete(@PathVariable long id,HttpServletRequest request){
-        cartServiceImpl.delete(id,request);
-        return "";
+    public EgoResult delete(@PathVariable long id, HttpServletRequest request){
+        return cartServiceImpl.delete(id,request);
     }
 
     @RequestMapping(value = "cart/update/num/{id}/{num}.action")
     @ResponseBody
-    public String update(@PathVariable long id,@PathVariable int num,HttpServletRequest request){
-        cartServiceImpl.update(id,num,request);
-        return "";
-
+    public EgoResult update(@PathVariable long id,@PathVariable int num,HttpServletRequest request){
+        return  cartServiceImpl.update(id,num,request);
     }
 
 

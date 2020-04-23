@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @create: 2020-04-10 10:51
  **/
 @Controller
-public class DemoController {
+public class ForwardController {
 
     @RequestMapping("/")
     public String index(){
@@ -19,8 +19,8 @@ public class DemoController {
 
     @RequestMapping("/forward")
     @ResponseBody
-    public String redirect(){
-
+    public String forward(){
+        return "WelCome ForwardController";
     }
 
 

@@ -3,6 +3,7 @@ package com.ego.cart.service.impl;
 import business.TbItemChild;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.ego.cart.service.CartService;
+import com.ego.commons.pojo.EgoResult;
 import com.ego.commons.utils.CookieUtils;
 import com.ego.commons.utils.JsonUtils;
 import com.ego.dubbo.service.TbItemDubboService;
@@ -88,7 +89,7 @@ public class CartServiceImpl implements CartService {
 
 
     @Override
-    public void delete(long id, HttpServletRequest request) {
+    public EgoResult delete(long id, HttpServletRequest request) {
         String token = CookieUtils.getCookieValue(request, "TT_TOKEN");
         TbUser tbUser = JsonUtils.jsonToPojo(jedisDaoImpl.get(token), TbUser.class);
         String uuidKeyCart = itemKey + tbUser.getUsername();
@@ -106,10 +107,15 @@ public class CartServiceImpl implements CartService {
                 jedisDaoImpl.expire(uuidKeyCart,0);
             }
         }
+
+        EgoResult egoResult = new EgoResult();
+        egoResult.setStatus(200);
+        egoResult.setMsg("OK");
+        return egoResult;
     }
 
     @Override
-    public void update(long id, int num, HttpServletRequest request) {
+    public EgoResult update(long id, int num, HttpServletRequest request) {
         String token = CookieUtils.getCookieValue(request, "TT_TOKEN");
         TbUser tbUser = JsonUtils.jsonToPojo(jedisDaoImpl.get(token), TbUser.class);
         String uuidKeyCart = itemKey + tbUser.getUsername();
@@ -127,5 +133,9 @@ public class CartServiceImpl implements CartService {
             }
             jedisDaoImpl.set(uuidKeyCart, JsonUtils.objectToJson(list));
         }
+        EgoResult egoResult = new EgoResult();
+        egoResult.setStatus(200);
+        egoResult.setMsg("OK");
+        return egoResult;
     }
 }
