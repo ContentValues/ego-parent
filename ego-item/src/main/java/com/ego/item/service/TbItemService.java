@@ -1,7 +1,6 @@
 package com.ego.item.service;
 
-import com.ego.item.pojo.TbItemChild;
-import com.ego.pojo.TbItem;
+import business.TbItemChild;
 
 /**
  * @program: ego-parent

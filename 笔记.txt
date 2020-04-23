@@ -1,0 +1,7 @@
+
+
+不同tomcat之间数据相互访问的问题
+
+1 jsonp技术
+2 httpclient
+3 redis 因为同一个项目中不同的tomcat依赖的是同一个redis 那么可以通过redis进行 不同tomcat直接数据访问问题

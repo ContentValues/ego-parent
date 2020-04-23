@@ -42,6 +42,7 @@ com/ego/pojo/TbContentCategoryExample$Criteria.class
 com/ego/pojo/TbContentExample$Criteria.class
 com/ego/pojo/TbItemParamExample$GeneratedCriteria.class
 com/ego/pojo/TbContentCategoryExample$GeneratedCriteria.class
+business/TbItemChild.class
 com/ego/pojo/TbItemParam.class
 com/ego/pojo/TbItemCatExample$Criteria.class
 com/ego/pojo/TbItemDescExample.class

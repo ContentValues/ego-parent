@@ -30,19 +30,22 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <!--commons-logging-->
         <!--<dependency>-->
             <!--<groupId>commons-logging</groupId>-->
             <!--<artifactId>commons-logging</artifactId>-->
             <!--<version>${logging-version}</version>-->
         <!--</dependency>-->
-
-
         <!-- 依赖redis -->
         <dependency>
             <groupId>com.ego</groupId>
             <artifactId>ego-redis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- 依赖接口 -->
+        <dependency>
+            <groupId>com.ego</groupId>
+            <artifactId>ego-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
@@ -50,12 +53,6 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
-        </dependency>
-        <!-- 依赖接口 -->
-        <dependency>
-            <groupId>com.ego</groupId>
-            <artifactId>ego-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- jedis -->
         <dependency>
